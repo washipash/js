@@ -66,7 +66,7 @@ class Mago extends Personaje {
   }
 
   explotarAlMorir() {
-    if (Math.random() < 0.4) {
+    if (Math.random() < 0.1) {
       console.log(`${this.nombre} se volvió loco y voló en mil pedazos llevándose a todos con él.`);
       personajes.forEach(p => p.vida = 0);
     }
@@ -162,7 +162,7 @@ function obtenerObjetivoAleatorio(excepto) {
 }
 
 // Ciclo de combate
-function iniciarCombate(jugador) {
+function iniciarCombate() {
   while (personajes.filter(p => p.vida > 0).length > 1) {
     personajes.forEach(personaje => {
       if (personaje.vida > 0) {
@@ -196,4 +196,4 @@ function iniciarCombate(jugador) {
 }
 
 // Pantalla inicial
-pantallaPresentacion(jugador => iniciarCombate(jugador));
+pantallaPresentacion(() => iniciarCombate());
