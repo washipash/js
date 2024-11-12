@@ -42,7 +42,7 @@ function adivinar(){
     }
     //3: comparar ambos numeros y mostrar una advertencia si el numero es diferente
     if (numeroUsuario === numeroComputadora){
-      alert("Felicidades adivinaste correctamente el numero y ganaste");
+      alert("Felicidades adivinaste correctamente el numero");
       return;
     } else if (numeroUsuario > numeroComputadora){
       alert("el numero ingresado es mayor al numero que pense");
