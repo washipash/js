@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Piedra, papel o tijeras</title>
+</head>
+<body class="bg-gray-100">
+    <div id="pantalla" class="flex justify-center mt-20 items-center text-2xl font-bold">
+        <div id="jugador" class="px-4 py-2 bg-blue-200 rounded-lg text-center"></div>
+        <div class="mx-4">VS</div>
+        <div id="maquina" class="px-4 py-2 bg-red-200 rounded-lg text-center"></div>
+    </div>
+
+    <div id="eleccion" class="flex justify-center mt-20 space-x-4">
+        <button id="piedra" class="px-6 py-3 bg-gray-300 rounded-md text-lg font-semibold hover:bg-gray-400">Piedra</button>
+        <button id="papel" class="px-6 py-3 bg-gray-300 rounded-md text-lg font-semibold hover:bg-gray-400">Papel</button>
+        <button id="tijeras" class="px-6 py-3 bg-gray-300 rounded-md text-lg font-semibold hover:bg-gray-400">Tijeras</button>
+    </div>
+
+    <div id="resultados" class="mt-20 text-center text-xl font-medium">
+        <p id="mensaje" class="mb-4"></p>
+        <p id="partidas">Partidas jugadas: 0</p>
+        <p id="victoriasUsuario">Victorias del usuario: 0</p>
+        <p id="victoriasComputadora">Victorias de la computadora: 0</p>
+    </div>
+</body>
+<script src="ppt.js"></script>
+</html>

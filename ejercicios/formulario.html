@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Formulario de Registro</title>
+</head>
+<body class="bg-slate-500 grid justify-items-center">
+    <div class="mt-20 grid justify-items-center w-96 h-full list-none rounded-3xl border-4 border-gray-800 p-8 bg-sky-600">
+        <li class="grid justify-items-stretch">
+        <p>Nombre:</p>
+        <input type="text" placeholder="Nombre" class="h-5 w-60" id="nombre">
+        <p>Apellido:</p>
+        <input type="text" placeholder="Apellido" class="h-5 w-60" id="apellido">
+        <p>Correo:</p> 
+        <input type="email" placeholder="Ejemplo@correo.com" class="h-5 w-60" id="mail">
+        <p>Contraseña:</p>
+        <input type="password" placeholder="Contraseña" class="h-5 w-60" id="pass">
+        <p>Repetir contraseña:</p>
+        <input type="password" placeholder="Repetir Contraseña" class="h-5 w-60" id="rpass">
+        <button id="boton" class="justify-self-center rounded-full bg-cyan-500 text-white px-4 py-2  rounded-md hover:bg-blue-600" onclick="validar()">Enviar</button>
+        </li>
+    </div>
+</body>
+<script src="formulario.js"></script>
+</html>
