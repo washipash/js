@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetas del Sistema Solar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+        #universo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .planeta {
+            border: 1px solid #fff;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #111;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        .planeta h2 {
+            margin-top: 0;
+            color: #ff9900;
+        }
+        .planeta p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Planetas del Sistema Solar</h1>
+    <div id="universo"></div>
+</body>
+<script src="universo.js"></script>
+</html>
