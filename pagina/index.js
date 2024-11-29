@@ -141,11 +141,6 @@ modoBtn.addEventListener("click", () => {
     
 });
 
-document.getElementById('menu').addEventListener('click', function() {
-    const nav = document.getElementById('nav');
-    nav.classList.toggle('hidden'); // Muestra u oculta el nav en pantallas pequeñas
-});
-
 const universo = document.getElementById('universo');
 
 function createStar(x, y) {

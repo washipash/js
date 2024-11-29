@@ -50,7 +50,7 @@ body.dark-mode #modo {
 
 body.dark-mode #modo::before {
   background-color: #fff; /* Color del círculo en modo nocturno (oscuro) */
-  transform: translateX(60px); /* Mover el círculo al lado derecho */
+  transform: translateX(80px); /* Mover el círculo al lado derecho */
 }
 
 body.dark-mode #modo {
@@ -73,8 +73,14 @@ body.modo-nocturno {
   #modo::before {
     width: 25px; /* Ajuste del círculo */
     height: 25px;
+
+  }
+  body.dark-mode #modo::before {
+    background-color: #fff; /* Color del círculo en modo nocturno (oscuro) */
+    transform: translateX(60px); /* Mover el círculo al lado derecho */
   }
 }
+
 
 @media (max-width: 400px) {
   #modo {
@@ -87,21 +93,30 @@ body.modo-nocturno {
     width: 20px; /* Ajuste del círculo */
     height: 20px;
   }
+  body.dark-mode #modo::before {
+    background-color: #fff; /* Color del círculo en modo nocturno (oscuro) */
+    transform: translateX(50px); /* Mover el círculo al lado derecho */
+  }
 }
 
 .star {
   position: absolute;
-  width: 4px;
-  height: 4px;
-  background-color: white;
+  width: 5px;
+  height: 5px;
+  background-color: #fff; /* Color de las estrellas */
   border-radius: 50%;
-  animation: twinkle 1.5s infinite ease-in-out;
+  box-shadow: 0 0 8px yellow; /* Efecto de brillo */
+  animation: fadeOut 8s linear forwards; /* Desaparece con el tiempo */
 }
 
-@keyframes twinkle {
-  0% { opacity: 1; }
-  50% { opacity: 0.5; }
-  100% { opacity: 1; }
+/* Animación para que las estrellas se desvanezcan */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 #universo {
