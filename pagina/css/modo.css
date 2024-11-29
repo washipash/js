@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Estilo para el botón */
+#modo {
+  width: 120px;
+  height: 40px;
+  background-color: #eee; /* Color del fondo del botón cuando el modo nocturno no está activado */
+  border: solid 5px #0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 20px;
+  position: relative;
+  transition: background-color 0.5s;
+  margin: 50px;
+  background-color: #eee;    
+  border-radius: 20px;
+  margin-left: 5px;
+}
+
+/* Animación */
+#modo::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #333; /* Color del círculo cuando no está activado (blanco) */
+  border-radius: 50%;
+  left: 0px;
+  transition: transform 0.5s, background-color 0.5s; 
+}
+
+/* Modo nocturno al marcar el checkbox */
+body.dark-mode {
+  background-color: #121212; /* Fondo oscuro para el cuerpo */
+  /* Color del texto en modo oscuro */
+}
+
+body.dark-mode #modo {
+  background-color: #333; /* Color de fondo del botón en modo nocturno (oscuro) */
+}
+
+body.dark-mode #modo::before {
+  background-color: #fff; /* Color del círculo en modo nocturno (oscuro) */
+  transform: translateX(60px); /* Mover el círculo al lado derecho */
+}
+
+body.dark-mode #modo {
+  background-color: #444;
+  color: white;
+}
+
+body.modo-nocturno {
+  background-color: #121212; 
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 600px) {
+  #modo {
+    width: 100px; /* Reducción de tamaño del botón */
+    height: 35px;
+    margin: 20px; /* Reducir márgenes en pantallas pequeñas */
+  }
+
+  #modo::before {
+    width: 25px; /* Ajuste del círculo */
+    height: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  #modo {
+    width: 90px; /* Reducción aún mayor en pantallas muy pequeñas */
+    height: 30px;
+    margin: 10px; /* Márgenes más pequeños */
+  }
+
+  #modo::before {
+    width: 20px; /* Ajuste del círculo */
+    height: 20px;
+  }
+}
+
+.star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50%;
+  animation: twinkle 1.5s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+#universo {
+  position: relative; /* Esto asegura que las estrellas se posicionen en relación a esta sección */
+  overflow: hidden;   /* Esto oculta las estrellas que se vayan fuera de los límites de la sección */
+}
