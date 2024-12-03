@@ -41,11 +41,15 @@ body {
 /* Modo nocturno al marcar el checkbox */
 body.dark-mode {
   background-color: #121212; /* Fondo oscuro para el cuerpo */
-  /* Color del texto en modo oscuro */
+   /* Color de texto por defecto en modo oscuro */
 }
 
 body.dark-mode #modo {
   background-color: #333; /* Color de fondo del botón en modo nocturno (oscuro) */
+}
+
+body.dark-mode #juego, h2 {
+  color: #fff; /* Color de fondo del botón en modo nocturno (oscuro) */
 }
 
 body.dark-mode #modo::before {
@@ -53,13 +57,14 @@ body.dark-mode #modo::before {
   transform: translateX(80px); /* Mover el círculo al lado derecho */
 }
 
-body.dark-mode #modo {
-  background-color: #444;
-  color: white;
+body.dark-mode .admin-card {
+  color: white; /* Cambiar color del texto para administradores en modo oscuro */
 }
 
-body.modo-nocturno {
-  background-color: #121212; 
+/* Asegurarse de que las tarjetas no cambien de fondo */
+body.dark-mode .card {
+  background-color: white; /* Fondo blanco para las tarjetas en modo oscuro */
+  color: black; /* Color de texto negro para las tarjetas en modo oscuro */
 }
 
 /* Media Queries para pantallas pequeñas */
@@ -99,6 +104,8 @@ body.modo-nocturno {
   }
 }
 
+/* esto es para el home */
+
 .star {
   position: absolute;
   width: 5px;
@@ -123,3 +130,6 @@ body.modo-nocturno {
   position: relative; /* Esto asegura que las estrellas se posicionen en relación a esta sección */
   overflow: hidden;   /* Esto oculta las estrellas que se vayan fuera de los límites de la sección */
 }
+
+/*aqui en perfil*/
+
